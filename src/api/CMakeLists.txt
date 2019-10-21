@@ -13,6 +13,8 @@ if(OPENMP_FOUND)
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
 endif()
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fms-extensions -std=c++11")
+
 add_library(vhacdapi SHARED ${PROJECT_CPP_FILES} ${PROJECT_C_FILES} ${PROJECT_INC_FILES} ${PROJECT_INL_FILES})
 
 target_include_directories(vhacdapi PRIVATE ${CMAKE_SOURCE_DIR}/VHACD_Lib/public ${CMAKE_CURRENT_SOURCE_DIR}/inc)
