@@ -22,3 +22,6 @@ _deps
 *.dylib
 *.a
 testVHACD
+
+# OS
+.DS_Store
